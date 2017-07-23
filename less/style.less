@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+///////////////////////////////////////////////////////////
+@grey: #706b73;
+@grey-text: #6e6e6e;
+@orange: #fc7254;
+@bg-main: #f5f5f5;
+///////////////////////////////////////////////////////////
+.text(@w, @s){
+	font-family:'Open Sans', sans-serif;
+	font-weight: @w;
+	font-size: @s;
+}
+.nowrap{
+	padding: 0px;
+	margin: 0px;
+}
+.radius(@r){
+	-webkit-border-radius: @r;
+	-moz-border-radius: @r;
+	-ms-border-radius: @r;
+	-o-border-radius: @r;
+	border-radius: @r;
+}
+.shadow{
+	-webkit-box-shadow: 0px 0px 57px 0px rgba(20,20,21,0.2);
+	-moz-box-shadow: 0px 0px 57px 0px rgba(20,20,21,0.2);
+	-ms-box-shadow: 0px 0px 57px 0px rgba(20,20,21,0.2);
+	-o-box-shadow: 0px 0px 57px 0px rgba(20,20,21,0.2);
+	box-shadow: 0px 0px 57px 0px rgba(20,20,21,0.2);
+}
+////////////////////////////////////////////////////////////////
+body{
+	.text(400, 14px);
+	color: @grey-text;	
+}
+header{	
+	height: 100vh;
+	background-color: @bg-main;
+}
+input, button, textarea{
+	&:focus{
+		outline: none;
+	}
+}
+///////////////////////ХЭДЕР////////////////////////////////////
+.main{
+	///////////////////////ЛОГОТИП////////////////////////////////////
+	&-head{
+		margin-top: 3%;
+	}
+	&-logo-border{
+		border: 3px solid @grey;
+		width: 155px;
+		height: 55px;
+		text-align: center;
+		line-height: 49px;
+		p{
+			.text(600, 36px);
+			color: @grey;
+			.nowrap;
+			span{
+				color: lighten(@orange, 5%);
+			}
+		}
+	}
+	&-nav{
+		height: 55px;
+		position: relative;
+		float: right;
+		width: 35px;
+	}
+	///////////////////////ЗАГОЛОВОК////////////////////////////////////
+	&-text{
+		margin-top: 5%;		
+		text-align: center;
+		h1{
+			.text(600, 50px);
+			color: @grey-text;
+			span{
+				color:@orange;
+			}
+		}
+		p{
+			padding: 0px 18px;
+			margin-top: 3%;
+		}
+	}
+	///////////////////////ФОРМА////////////////////////////////////
+	&-form{
+		margin-top: 5%;
+		padding: 35px;
+		background-color: #fff;
+		.shadow;
+		.radius(2px);
+		p{
+			.text(600, 20px);
+			text-align: center;
+			span{
+				color: @orange;
+			}
+		}
+		input, textarea{
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid lighten(@grey-text, 15%);
+			margin-top: 30px;
+			font-size: 15px;
+		}
+		button{
+			background-color: @orange;
+			border: none;
+			padding: 15px 35px;
+			.radius(50px);
+			color: white;
+			display: block;
+			margin: 0 auto;
+			margin-top: 30px;
+			font-size: 16px;
+		}
+	}
+}
+///////////////////////КНОПКА МЕНЮ////////////////////////////////////
+.line, .line:before, .line:after{
+	display: block;
+	position: absolute;
+	height: 4px;
+	width: 34px;
+	background-color: @grey;
+	top: 50%;
+	.radius(4px);
+}
+.line{
+	&:before{
+		content: ' ';
+		top:-8px;
+	}
+	&:after{
+		content: ' ';
+		top:8px;
+	}
+}
+///////////////////////////////////////////////////////////
