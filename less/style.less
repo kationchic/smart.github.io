@@ -11,6 +11,7 @@
 @bg-lara: #f74770;
 ////////
 @bg-s-list: #fbfbfb;
+@grey-btn: #e0e0e0;
 ///////////////////////////////////////////////////////////
 .text(@w, @s){
 	font-family:'Open Sans', sans-serif;
@@ -330,5 +331,63 @@ section#works{
 ///////////////////////////////////////////////////////////
 .panel-default>.panel-heading{
 	color: @orange;
-	.font(600,16px);
+	.text(600,16px);
+}
+///////////////////////////////////////////////////////////
+.feeadback{
+	&-box{
+		margin: 35px 15px;
+		padding: 15px;		
+		p{
+			font-size: 17px;
+			margin-top: 25px;
+			padding: 0 25px;
+			span{
+				.text(700,16px);
+			}
+		}
+	}
+	&-slider{
+		&-arrows{
+			position: absolute;
+			top: 50%;			
+			font-size: 18px;
+			z-index: 99;
+			height: 50px;
+			width: 50px;
+			text-align: center;
+			padding-top: 15px;	
+			box-shadow: 0px 3px 14px 0px rgba(20,20,21,0.28);		
+			.radius(50%);
+			&-left{
+				left:0;
+			}
+			&-right{
+				right:0;
+			}
+			&:hover{				
+				background-color: @orange;								
+			}
+		}
+	}
+}
+.fa-star{
+	color: yellow;
+}
+.slick-active{
+	outline: none;
+}
+.slick-dots {
+	& li button:before{
+		width: 21px;
+		height: 7px;
+		color: transparent;
+		background-color: @grey;
+		.radius(10px);
+	}
+	& li.slick-active button:before{
+		color: transparent;
+		background-color: @orange;
+	}
+	button: -50px;
 }

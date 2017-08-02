@@ -8,7 +8,9 @@
     <title>Smart</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="slick/slick.css" rel="stylesheet">
+    <link href="slick/slick-theme.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -348,10 +350,114 @@
       </div>
     </section>
 
+    <section id="feeadback">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">            
+            <h2><span>Clients</span> Said</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, cum!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="feeadback-slider">
+              <div class="feeadback-slider-item text-center">
+                <div class="feeadback-box">
+                  <img class="img-circle center-block" src="img/clients/1.jpg" alt="">
+                  <p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <p><span>Kita Say,</span> HK Director</p>
+                </div>
+              </div>
+              <div class="feeadback-slider-item text-center">
+                <div class="feeadback-box">
+                  <img class="img-circle center-block" src="img/clients/2.jpg" alt="">
+                  <p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <p><span>Kita Say,</span> HK Director</p>
+                </div>
+              </div>
+              <div class="feeadback-slider-item text-center">
+                <div class="feeadback-box">
+                  <img class="img-circle center-block" src="img/clients/1.jpg" alt="">
+                  <p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <p><span>Kita Say,</span> HK Director</p>
+                </div>
+              </div>
+              <div class="feeadback-slider-item text-center">
+                <div class="feeadback-box">
+                  <img class="img-circle center-block" src="img/clients/2.jpg" alt="">
+                  <p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <p><span>Kita Say,</span> HK Director</p>
+                </div>
+              </div>
+              <div class="feeadback-slider-item text-center">
+                <div class="feeadback-box">
+                  <img class="img-circle center-block" src="img/clients/1.jpg" alt="">
+                  <p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <p><span>Kita Say,</span> HK Director</p>
+                </div>
+              </div>
+              <div class="feeadback-slider-item text-center">
+                <div class="feeadback-box">
+                  <img class="img-circle center-block" src="img/clients/2.jpg" alt="">
+                  <p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <p><span>Kita Say,</span> HK Director</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('.feeadback-slider').slick({
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true,
+          prevArrow: '<i class="fa feeadback-slider-arrows feeadback-slider-arrows-left fa-chevron-left"><i>',
+          nextArrow: '<i class="fa feeadback-slider-arrows feeadback-slider-arrows-right fa-chevron-right"><i>',
+          dots: true
+        });
+      });
+    </script>
   </body>
 </html>
