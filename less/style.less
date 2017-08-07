@@ -43,6 +43,7 @@ body{
 }
 header{	
 	height: 100vh;
+	min-height: 700px;
 	background-color: @bg-main;
 }
 input, button, textarea{
@@ -51,7 +52,7 @@ input, button, textarea{
 	}
 }
 section{
-	padding: 10% 0;
+	padding: 10% 0;	
 }
 h2{
 	.text(600,50px);
@@ -106,7 +107,7 @@ h2{
 			padding: 0px 18px;
 			margin-top: 3%;
 		}
-	}
+	}	
 	///////////////////////ФОРМА////////////////////////////////////
 	&-form{
 		margin-top: 5%;
@@ -143,13 +144,17 @@ h2{
 }
 ///////////////////////КНОПКА МЕНЮ////////////////////////////////////
 .line, .line:before, .line:after{
-	display: block;
-	position: absolute;
 	height: 4px;
 	width: 34px;
-	background-color: @grey;
-	top: 50%;
 	.radius(4px);
+	background-color: @grey;
+	display: block;
+	position: absolute;	
+	right:0;	
+	top: 50%;	
+}
+.line{
+	margin-right: 10px;
 }
 .line{
 	&:before{
@@ -242,8 +247,12 @@ section#works{
 }
 .works{
 	&-box{
-		height: 360px;
-		position: relative;
+		width: 360px;
+		position: relative;		
+		margin-bottom: 3%;		
+		img{
+			width: 100%;			
+		}
 		.signature{
 			opacity: 0;
 			position: absolute;
@@ -284,9 +293,11 @@ section#works{
 .services{
 	&-list{
 		ul{
-			list-style: none;			
+			list-style: none;
+			text-align: center;	
+			.nowrap;		
 			li{
-				display: block;
+				display: inline-block;
 				margin: 5px auto;
 				width: 100px;
 				height: 100px;
@@ -412,4 +423,66 @@ footer{
 }
 .modal-dialog-large{
 	width: 70%;
+}
+///////////////////////////
+@media (min-width: 0px) and (max-width: 480px){
+	.main{
+		&-text{
+			h1{
+				font-size: 26px;
+			}
+		}
+	}
+	h2{
+		font-size: 22px;
+	}
+	.process{
+		&-box{
+			margin: 35px 0;			
+		}
+	}
+	.works{
+		&-box{
+			width: 220px;
+			left: 10%;			
+		}
+	}
+}
+@media (min-width: 481px) and (max-width: 767px){
+	.process{
+		&-box{
+			margin: 35px 0;			
+		}
+	}
+	.works{
+		&-box{
+			width: 220px;
+			left: 30%;
+		}
+	}
+}
+@media (min-width: 769px) and (max-width: 991px){
+	.process{
+		&-box{
+			margin: 35px 0;
+		}
+	}
+	.works{
+		&-box{
+			width: 220px;			
+		}
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	.works{
+		&-box{
+			width: 294px;			
+		}
+	}
+}
+@media (min-width: 1200px) and (max-width: 1600px){
+	
+}
+@media (min-width: 1601px) {
+	
 }
